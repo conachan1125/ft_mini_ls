@@ -6,7 +6,7 @@
 /*   By: tmomose <tmomose@student.42tokyo.j>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/04 16:56:07 by tmomose           #+#    #+#             */
-/*   Updated: 2020/12/04 23:20:00 by tmomose          ###   ########.fr       */
+/*   Updated: 2020/12/06 15:13:41 by tmomose          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,9 @@ int		sort_by_mtime(char *s1, char *s2)
 		return (INT_MIN);
 	if (lstat(s2, &buf2) != 0)
 		return (INT_MIN);
-	if (buf1.st_mtimespec.tv_nsec != buf2.st_mtimespec.tv_nsec)
+	if (buf1.st_mtimespec.tv_sec != buf2.st_mtimespec.tv_sec)
+		return (buf1.st_mtimespec.tv_sec - buf2.st_mtimespec.tv_sec);
+	else if (buf1.st_mtimespec.tv_nsec != buf2.st_mtimespec.tv_nsec)
 		return (buf1.st_mtimespec.tv_nsec - buf2.st_mtimespec.tv_nsec);
 	else
 		return (-ft_strcmp(s1, s2));
