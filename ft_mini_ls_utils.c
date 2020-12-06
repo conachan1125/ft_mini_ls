@@ -6,7 +6,7 @@
 /*   By: tmomose <tmomose@student.42tokyo.j>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/04 16:56:07 by tmomose           #+#    #+#             */
-/*   Updated: 2020/12/06 15:13:41 by tmomose          ###   ########.fr       */
+/*   Updated: 2020/12/06 15:15:55 by tmomose          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int		perror_message(char *error_message)
 	return (1);
 }
 
-int		sort_by_mtime(char *s1, char *s2)
+int		cmp_by_mtime(char *s1, char *s2)
 {
 	struct stat		buf1;
 	struct stat		buf2;

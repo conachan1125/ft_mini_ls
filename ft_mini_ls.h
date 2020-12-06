@@ -6,7 +6,7 @@
 /*   By: tmomose <tmomose@student.42tokyo.j>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/02 22:20:49 by tmomose           #+#    #+#             */
-/*   Updated: 2020/12/04 21:02:09 by tmomose          ###   ########.fr       */
+/*   Updated: 2020/12/06 15:16:45 by tmomose          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,6 @@
 
 int		perror_message(char *error_message);
 int		put_err_msg(char *error_message, size_t len);
-int		sort_by_mtime(char *s1, char *s2);
+int		cmp_by_mtime(char *s1, char *s2);
 
 #endif

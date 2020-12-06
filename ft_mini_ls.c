@@ -6,7 +6,7 @@
 /*   By: tmomose <tmomose@student.42tokyo.j>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/02 22:09:03 by tmomose           #+#    #+#             */
-/*   Updated: 2020/12/04 21:28:52 by tmomose          ###   ########.fr       */
+/*   Updated: 2020/12/06 15:16:16 by tmomose          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ int		do_ls(void)
 		free(files);
 		return (1);
 	}
-	ft_strfsort(files, &sort_by_mtime);
+	ft_strfsort(files, &cmp_by_mtime);
 	ft_putdiv(files);
 	ft_freediv((void ***)&files);
 	return (0);
